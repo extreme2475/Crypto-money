@@ -47,6 +47,9 @@ switch (event.target.value){
      Stock Market
   </a>
 </li>
+<li>
+  <a>AI Advisor</a>
+</li>
 
       </ul>
       <div className='nav-right'>
