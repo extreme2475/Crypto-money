@@ -1,0 +1,107 @@
+.advisor {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: linear-gradient(rgba(11, 11, 54, 0.9), rgba(0, 0, 0, 1));
+    border-radius: 15px;
+    height: 80vh; /* Fixed height for chat feel */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+    border: 1px solid #333;
+}
+
+/* Chat Box Area */
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #5d3fd3 #000;
+}
+
+/* Individual Message Bubbles */
+.msg-bubble {
+    display: flex;
+    gap: 12px;
+    max-width: 85%;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.msg-bubble p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    white-space: pre-wrap; /* CRITICAL: Makes the top 10 list look like a list */
+}
+
+/* Assistant Styling (Left side) */
+.msg-bubble.assistant {
+    align-self: flex-start;
+    background-color: #1e1e1e;
+    color: #e3e3e3;
+    border-bottom-left-radius: 2px;
+}
+
+/* User Styling (Right side) */
+.msg-bubble.user {
+    align-self: flex-end;
+    background-color: #5d3fd3;
+    color: white;
+    border-bottom-right-radius: 2px;
+    flex-direction: row-reverse; /* Put avatar on the right for user */
+}
+
+/* Avatar Icons */
+.avatar {
+    font-size: 20px;
+    min-width: 30px;
+}
+
+/* Input Section */
+.chat-input {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background: #000;
+    border-top: 1px solid #333;
+    border-radius: 0 0 15px 15px;
+}
+
+.chat-input input {
+    flex: 1;
+    background: #111;
+    border: 1px solid #444;
+    outline: none;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.chat-input button {
+    padding: 10px 25px;
+    background: #5d3fd3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.chat-input button:hover {
+    background: #7b5ff0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .advisor {
+        margin: 10px;
+        height: 85vh;
+    }
+}
